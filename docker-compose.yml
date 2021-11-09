@@ -5,7 +5,7 @@ services:
   # https://registry.hub.docker.com/r/prom/prometheus
   prometheus:
     container_name: prometheus
-    image: prom/prometheus:v2.29.2
+    image: prom/prometheus:v2.31.1
     ports:
       - 9090:9090
     extra_hosts:
@@ -22,7 +22,7 @@ services:
       - ${PWD}/monitoring/prometheus/:/etc/prometheus/
 
   grafana:
-    image: grafana/grafana:8.1.2
+    image: grafana/grafana:8.2.3
     container_name: grafana
     ports:
     - 3000:3000
